@@ -26,13 +26,16 @@ public class StatusServiceImpl implements StatusService {
         this.modelMapper = modelMapper;
     }
 
-
-
+    public void test2(){
+        System.out.println("test 2");
+    }
+  
     // this will create status
 
     public void test(){
         System.out.println("ok");
     }
+  
     @Override
     public StatusDto createStatus(StatusDto statusDto) {
         Status status = convertToEntity(statusDto);
@@ -63,8 +66,6 @@ public class StatusServiceImpl implements StatusService {
             throw new StatusNotFoundException("Status not found with ID: " + statusID);
         }
     }
-
-
 
     private StatusDto convertToDto(Status status) {
         return modelMapper.map(status, StatusDto.class);
