@@ -27,6 +27,10 @@ public class PostServiceImpl implements PostService {
         this.modelMapper = modelMapper;
     }
 
+    //this method will fetch all the post from database
+
+
+
     @Override
     public List<PostDto> getAllPosts() {
         return postRepository.findAll().stream()
