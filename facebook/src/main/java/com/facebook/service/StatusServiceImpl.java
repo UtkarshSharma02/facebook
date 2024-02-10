@@ -26,6 +26,10 @@ public class StatusServiceImpl implements StatusService {
         this.modelMapper = modelMapper;
     }
 
+    public void test2(){
+        System.out.println("test 2");
+    }
+
     @Override
     public StatusDto createStatus(StatusDto statusDto) {
         Status status = convertToEntity(statusDto);
